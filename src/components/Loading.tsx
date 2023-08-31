@@ -6,6 +6,8 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
 
+  z-index: 100;
+
   position: fixed;
   display: flex;
   flex-direction: column;

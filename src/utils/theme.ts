@@ -9,6 +9,7 @@ export const theme: DefaultTheme = {
   backgroundColor: "#ffffffff",
   borderColor: "#183153ff",
   borderColor2: "#424242ff",
+  borderColor3: "#222222ff",
 };
 
 export const darkTheme: DefaultTheme = {

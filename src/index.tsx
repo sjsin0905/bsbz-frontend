@@ -10,6 +10,11 @@ const Grobal = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  ::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+  }
 `;
 
 const root = ReactDOM.createRoot(
