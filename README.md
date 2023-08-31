@@ -2,10 +2,19 @@
 npm install -save react-scripts // 실행 전 react 설치
 
 npm install react-router-dom // router 설치
+
 npm install styled-components // styled-components 설치
 
 npm i --save @fortawesome/free-brands-svg-icons
+
 npm i --save @fortawesome/react-fontawesome@latest
+
 npm i --save @fortawesome/free-regular-svg-icons
+
 npm i --save @fortawesome/free-solid-svg-icons
+
 // fontawesome 설치
+
+npm install swiper
+
+// slider-swiper 설치
