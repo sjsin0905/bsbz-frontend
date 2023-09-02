@@ -34,7 +34,7 @@ export default function Slider({ data }) {
         }}
       >
         {data.map((product) => (
-          <SwiperSlide>
+          <SwiperSlide key={product.productId}>
             <ImgBox
               url={product.url}
               text={product.text}

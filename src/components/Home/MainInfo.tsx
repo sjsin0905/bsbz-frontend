@@ -5,7 +5,7 @@ import { faGem } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useRef } from "react";
 
 const Container = styled.div`
-  height: 150vh;
+  height: 180vh;
   width: 100%;
   background-color: ${(props) => props.theme.borderColor};
   color: ${(props) => props.theme.mainColor};
@@ -36,6 +36,18 @@ const TextBox = styled.div`
 
   p {
     font-size: 18px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin: 36px 0;
+    color: ${(props) => props.theme.textColor};
+  }
+
+  h4 {
+    font-size: 18px;
+    color: ${(props) => props.theme.mainColor};
+    font-weight: lighter;
   }
 `;
 
@@ -102,14 +114,19 @@ const Article = styled.div`
   align-items: center;
   width: 16vw;
 
+  h3 {
+    font-size: 24px;
+  }
+
   p {
+    font-size: 18px;
     margin-top: 18px;
     color: ${(props) => props.theme.textColor};
   }
 `;
 
 const ButtonBorder = styled.div`
-  margin-top: 64px;
+  margin-top: 32px;
 
   display: flex;
   flex-direction: column;
@@ -265,6 +282,17 @@ export default function MainInfo() {
                 </Article>
               </Articles>
             </DescriptionBox>
+
+            <TextBox>
+              <h3>당신의 작은 투자, 더 큰 다양성으로 변환하세요!</h3>
+              <h4>
+                조각투자는 작은 금액으로도 다양한 자산에 접근하고 투자할 수 있는
+                최적의 방법입니다. 수많은 자산 클래스 중에서도 주식, 채권,
+                부동산 등 여러 분야에 투자할 수 있어, 여러분의 포트폴리오를
+                다양하게 구성하실 수 있습니다. 이렇게 다양한 자산에 투자하면서,
+                투자 리스크를 분산하고 안정적인 수익을 추구할 수 있습니다.
+              </h4>
+            </TextBox>
 
             <ButtonBorder>
               <Button>
