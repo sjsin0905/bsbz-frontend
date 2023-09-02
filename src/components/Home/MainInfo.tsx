@@ -3,24 +3,35 @@ import { styled } from "styled-components";
 const Container = styled.div`
   height: 60vh;
   width: 100%;
+  background-color: ${(props) => props.theme.borderColor};
+  color: ${(props) => props.theme.mainColor};
 `;
 
-const Detail = styled.div``;
-
-const TextBox = styled.div`
+const Detail = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const TextBox = styled.div`
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   padding: 24px 72px;
-  width: 40%;
 
   h2 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 24px;
+    color: ${(props) => props.theme.textColor};
   }
 
   p {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
 

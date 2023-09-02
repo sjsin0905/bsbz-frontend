@@ -13,9 +13,9 @@ const Grobal = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-  /* width: 30; */
+  width: 0;
   position: fixed;
-  /* background-color: transparent; */
+  background-color: transparent;
   }
 `;
 

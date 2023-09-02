@@ -10,6 +10,7 @@ const Img = styled.img`
   width: 36px;
   height: 36px;
   border-radius: 36px;
+  border: 2px solid ${(props) => props.theme.subColor};
 `;
 
 export default function Member({

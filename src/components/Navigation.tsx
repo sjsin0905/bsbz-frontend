@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 const Container = styled.div`
-  background-color: ${(props) => props.theme.borderColor2};
-  color: ${(props) => props.theme.textColor2};
-  height: 8vh;
+  background-color: ${(props) => props.theme.borderColor};
+  color: ${(props) => props.theme.mainColor};
+  height: 12vh;
 
   position: fixed;
   width: 100%;

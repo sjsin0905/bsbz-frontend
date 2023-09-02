@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 // import { ISliderData } from "./Slider";
 
 const Container = styled.span<{ url: string }>`
-  width: 60vh;
-  height: 40vh;
+  width: 100vw;
+  height: 75vh;
 
   display: flex;
   justify-content: start;
@@ -16,16 +16,13 @@ const Container = styled.span<{ url: string }>`
     ),
     url(${(props) => props.url});
   background-size: cover;
-
-  border-radius: 0 12px 12px 0;
-  border: 1px solid ${(props) => props.theme.textColor2};
 `;
 
 const TextBox = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: ${(props) => props.theme.textColor2};
+  color: ${(props) => props.theme.textColor};
 
   h2 {
     font-size: 18px;
