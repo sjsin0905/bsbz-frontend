@@ -7,7 +7,6 @@ import ImgBox from "./ImgBox";
 // Import Swiper React components
 
 // Import Swiper styles
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Slider.css";

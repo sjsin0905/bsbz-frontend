@@ -12,7 +12,7 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 `;
 
@@ -22,6 +22,17 @@ const NavBar = styled.div`
   justify-content: center;
   align-items: center;
   gap: 12px;
+
+  span {
+    color: ${(props) => props.theme.textColor};
+    padding: 12px 18px;
+    border: 1px solid ${(props) => props.theme.borderColor};
+    transition: border linear 0.3s;
+  }
+
+  span:hover {
+    border: 1px solid ${(props) => props.theme.mainColor};
+  }
 `;
 
 const Logo = styled.div``;
@@ -44,7 +55,7 @@ export default function Navigation() {
       <NavBar>
         <span onClick={onMove}>HOME</span>
         <span onClick={onMove}>LOGIN</span>
-        <span onClick={onMove}>LOGIN</span>
+        <span onClick={onMove}>SIGN-UP</span>
         <span onClick={onMove}>LOGIN</span>
       </NavBar>
     </Container>
