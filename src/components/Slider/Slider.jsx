@@ -22,7 +22,7 @@ import "swiper/css/pagination";
 import { styled } from "styled-components";
 
 const Container = styled.div`
-  padding: 120px 0;
+  padding: 18vh 0 10vh 0;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
   background-repeat: no-repeat;
   background-color: ${(props) => props.theme.borderColor1};
@@ -35,7 +35,7 @@ export default function Slider({ data }) {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={5}
+        slidesPerView={3}
         coverflowEffect={{
           rotate: 10, // 회전각도
           stretch: 0,

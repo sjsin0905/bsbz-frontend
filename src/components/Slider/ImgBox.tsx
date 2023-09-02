@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 // import { ISliderData } from "./Slider";
 
 const Container = styled.span<{ url: string }>`
-  width: 40vh;
+  width: 60vh;
   height: 40vh;
 
   display: flex;

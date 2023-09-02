@@ -4,11 +4,16 @@ import { styled } from "styled-components";
 const Container = styled.div`
   background-color: ${(props) => props.theme.borderColor2};
   color: ${(props) => props.theme.textColor2};
-  height: 5vh;
+  height: 8vh;
+
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const NavBar = styled.div`
@@ -38,6 +43,8 @@ export default function Navigation() {
       </Logo>
       <NavBar>
         <span onClick={onMove}>HOME</span>
+        <span onClick={onMove}>LOGIN</span>
+        <span onClick={onMove}>LOGIN</span>
         <span onClick={onMove}>LOGIN</span>
       </NavBar>
     </Container>

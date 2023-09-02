@@ -9,11 +9,13 @@ const Grobal = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif
   }
 
   ::-webkit-scrollbar {
-  width: 0;
-  background-color: transparent;
+  /* width: 30; */
+  position: fixed;
+  /* background-color: transparent; */
   }
 `;
 

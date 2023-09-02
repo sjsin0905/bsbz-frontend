@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "styled-components";
 import { faForumbee } from "@fortawesome/free-brands-svg-icons";
+import Hood from "./Hood";
 
 const Container = styled.div`
   width: 100vw;
@@ -89,6 +90,7 @@ const Dot3 = styled.span`
 export default function Loading() {
   return (
     <>
+      <Hood title={"LOADING..."} />
       <Container>
         <FontAwesomeIcon
           icon={faForumbee}

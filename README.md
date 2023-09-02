@@ -18,3 +18,10 @@ npm i --save @fortawesome/free-solid-svg-icons
 npm install swiper
 
 // slider-swiper 설치
+
+npm install --save react-helmet
+
+npm i --save-dev @types/react-helmet
+
+// react-helmet 설치 (상단 바)
+// TS 설정
