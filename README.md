@@ -25,3 +25,10 @@ npm i --save-dev @types/react-helmet
 
 // react-helmet 설치 (상단 바)
 // TS 설정
+
+// 메인화면 사진 자료
+
+// 롤렉스 공식 홈페이지
+https://www.rolex.com/ko/watches/new-watches
+
+//
