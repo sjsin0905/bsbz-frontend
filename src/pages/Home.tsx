@@ -12,7 +12,7 @@ import MainInfo2 from "../components/Home/MainInfo2";
 const imgList = [
   {
     // url: "https://www.funble.kr/img/thumb/lct_thumb.jpg",
-    url: "https://uyjoqvxyzgvv9714092.cdn.ntruss.com/data2/content/image/2023/03/19/.cache/512/20230319580278.jpg",
+    url: "https://원당역롯데캐슬스카이엘.com/resource/img/main/vis_05.jpg",
     text: "해운대 엘시티",
     price: "3000",
     productId: "1",
