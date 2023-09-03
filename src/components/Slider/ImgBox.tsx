@@ -15,7 +15,9 @@ const Container = styled.span<{ url: string }>`
       rgba(0, 0, 0, 0)
     ),
     url(${(props) => props.url});
+  background-position: center;
   background-size: cover;
+  object-fit: cover;
 `;
 
 const TextBox = styled.div`

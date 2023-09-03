@@ -11,7 +11,8 @@ import MainInfo2 from "../components/Home/MainInfo2";
 
 const imgList = [
   {
-    url: "https://www.funble.kr/img/thumb/lct_thumb.jpg",
+    // url: "https://www.funble.kr/img/thumb/lct_thumb.jpg",
+    url: "https://uyjoqvxyzgvv9714092.cdn.ntruss.com/data2/content/image/2023/03/19/.cache/512/20230319580278.jpg",
     text: "해운대 엘시티",
     price: "3000",
     productId: "1",
@@ -29,7 +30,7 @@ const imgList = [
     productId: "3",
   },
   {
-    url: "https://content.rolex.com/v7/dam/new-watches/2023/new-yacht-master-42/new-watches-2023-yacht-master-42-mastering-lightness-m226627-0001_2301jva_003.jpg?imwidth=2440",
+    url: "https://content.rolex.com/v7/dam/new-watches/2023/new-cosmograph-daytona/new-watches-2023-cosmograph-daytona-platinum-case-back-m126506-0001_2301ac_002.jpg?imwidth=1600",
     text: "Yacht-Master 42",
     price: "3000",
     productId: "4",
