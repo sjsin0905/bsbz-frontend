@@ -11,6 +11,15 @@ const Container = styled.div`
   color: ${(props) => props.theme.mainColor};
 `;
 
+const Pentagon = styled.div`
+  height: 5vh;
+  background-color: ${(props) => props.theme.mainColor};
+
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 5vh solid ${(props) => props.theme.borderColor};
+`;
+
 const Detail = styled.div`
   display: flex;
   flex-direction: column;
@@ -110,7 +119,7 @@ const Articles = styled.div`
 const Article = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   width: 16vw;
 
@@ -159,6 +168,7 @@ const Button = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2vh;
 
   height: 8vh;
   width: 100%;
@@ -167,10 +177,11 @@ const Button = styled.div`
   border-radius: 0 0 1vw 1vw;
   color: ${(props) => props.theme.borderColor};
 
-  transition: background-color ease 0.5s;
+  transition: background-color ease-in 0.5s;
 
   &:hover {
     background-color: none;
+    color: ${(props) => props.theme.textColor};
   }
 
   /* h3 태그에 pointer-events를 추가하여 hover 이벤트 비활성화 */
@@ -188,10 +199,14 @@ const ActionBox = styled.div`
   height: auto;
   opacity: 0;
 
-  transition: opacity 2s ease 0.5s;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: opacity 2s ease 0.5s, transform 0.5s ease-out;
 
   &.visible {
     opacity: 1;
+    transform: translateX(0);
+    //시작 위치를 오른쪽 끝으로 설정
   }
 `;
 
@@ -302,6 +317,7 @@ export default function MainInfo() {
           </ActionBox>
         </Detail>
       </Container>
+      <Pentagon />
     </>
   );
 }

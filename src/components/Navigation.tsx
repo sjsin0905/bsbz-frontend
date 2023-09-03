@@ -26,12 +26,16 @@ const NavBar = styled.div`
   span {
     color: ${(props) => props.theme.textColor};
     padding: 12px 18px;
-    border: 1px solid ${(props) => props.theme.borderColor};
-    transition: border linear 0.3s;
+    border: 2px solid ${(props) => props.theme.borderColor};
+    transition: border-top ease-in-out 0.3s, border-right 0.3s ease-in-out 0.1s,
+      border-bottom 0.3s ease-in-out 0.2s, border-left 0.3s ease-in-out 0.3s;
   }
 
   span:hover {
-    border: 1px solid ${(props) => props.theme.mainColor};
+    border-top: 2px solid ${(props) => props.theme.mainColor};
+    border-right: 2px solid ${(props) => props.theme.mainColor};
+    border-bottom: 2px solid ${(props) => props.theme.mainColor};
+    border-left: 2px solid ${(props) => props.theme.mainColor};
   }
 `;
 

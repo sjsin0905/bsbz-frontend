@@ -12,7 +12,9 @@ const Grobal = createGlobalStyle`
     font-family: 'Noto Sans KR', sans-serif
   }
 
+
   ::-webkit-scrollbar {
+  height: 0;
   width: 0;
   position: fixed;
   background-color: transparent;
