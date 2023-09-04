@@ -6,6 +6,13 @@ const Container = styled.div`
   height: 120vh;
 
   background-color: ${(props) => props.theme.mainColor};
+`;
+
+const TextBox = styled.div`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   opacity: 0;
 
   transition: opacity ease-in 1s;
@@ -49,8 +56,10 @@ export default function MainInfo2() {
   }, []);
   return (
     <>
-      <Container ref={sectionRef}>
-        <h2>Hello</h2>
+      <Container>
+        <TextBox ref={sectionRef}>
+          <h2>Hello</h2>
+        </TextBox>
       </Container>
     </>
   );
