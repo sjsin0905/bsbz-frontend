@@ -45,6 +45,7 @@ export default function Navigation() {
   const nav = useNavigate();
 
   const onMove = (event: React.MouseEvent<HTMLSpanElement>) => {
+    // console.log(event);
     let destination = event.currentTarget.innerText.toLowerCase();
     console.log(destination);
 

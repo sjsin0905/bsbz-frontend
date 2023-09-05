@@ -3,21 +3,13 @@ import { styled } from "styled-components";
 import { faBuilding, faPalette } from "@fortawesome/free-solid-svg-icons";
 import { faGem } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useRef } from "react";
+import Pentagon from "../Pentagon";
 
 const Container = styled.div`
   height: 180vh;
   width: 100%;
   background-color: ${(props) => props.theme.borderColor};
   color: ${(props) => props.theme.mainColor};
-`;
-
-const Pentagon = styled.div`
-  height: 5vh;
-  background-color: ${(props) => props.theme.mainColor};
-
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-top: 5vh solid ${(props) => props.theme.borderColor};
 `;
 
 const Detail = styled.div`
@@ -317,7 +309,7 @@ export default function MainInfo() {
           </ActionBox>
         </Detail>
       </Container>
-      <Pentagon />
+      <Pentagon isReverse={false} />
     </>
   );
 }
