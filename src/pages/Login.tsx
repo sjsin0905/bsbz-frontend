@@ -3,6 +3,7 @@ import Footer from "../components/Footer/Footer";
 import Navigation from "../components/Navigation";
 import Loading from "../components/Loading";
 import styled from "styled-components";
+import { useForm } from "react-hook-form";
 
 const Container = styled.div`
   display: flex;
@@ -24,52 +25,151 @@ const Main = styled.div`
   align-items: center;
 `;
 
-const LoginForm = styled.div`
-  height: 50vh;
-  border: 1px solid;
-  width: 50vw;
-  padding-top: 48px;
-  padding-left: 48px;
-
+const TextBox = styled.div`
+  height: 68vh;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
-
-  form {
-    text-align: center;
-    padding-left: 48px;
-  }
-
-  input {
-    border: 0px;
-    border-radius: 12px;
-    text-align: center;
-    width: 280px;
-    height: 30px;
-    margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20vh;
+  margin-right: 50vh;
+  h2 {
+    // 회원가입 텍스트
+    margin-bottom: 2vh;
+    font-size: 40px;
   }
 `;
 
+const Forms = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 40vh;
+    // 입력 폼
+
+    p {
+      margin-bottom: 2vh;
+    }
+
+    input {
+      // 데이터 입력 폼
+      border: none;
+      padding: 1vh;
+      width: 240px;
+      border-radius: 8px;
+    }
+
+    button {
+      border: none;
+      width: 180px;
+      padding: 1vh;
+      border-radius: 6px;
+    }
+  }
+`;
+
+const ButtonBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 2px solid ${(props) => props.theme.borderColor};
+
+  overflow: hidden;
+  background-color: ${(props) => props.theme.borderColor};
+  padding: 0 1px 6px 1px;
+
+  transition: background-color ease 0.3s;
+
+  button {
+    background-color: ${(props) => props.theme.backgroundColor};
+    transition: color ease 0.3s, background-color ease 0.3s;
+    font-weight: bold;
+  }
+
+  &:hover {
+    cursor: pointer;
+    button {
+      color: ${(props) => props.theme.borderColor};
+      background-color: ${(props) => props.theme.cyColor};
+      cursor: pointer;
+    }
+  }
+`;
+
+const InputBox = styled.div`
+  background-color: ${(props) => props.theme.borderColor};
+  margin-bottom: 2vh;
+  border-radius: 8px;
+  border: 2px solid ${(props) => props.theme.borderColor};
+  overflow: hidden;
+  padding: 0 1px 6px 1px;
+`;
+
+interface IFormData {
+  user_id: string;
+  password: string;
+}
+
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
-  const deleteValue = () => {};
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormData>();
+
+  const onValid = (data: IFormData) => {
+    console.log(data);
+    console.log(errors);
+  };
   return (
     <>
       {isLoading && <Loading />}
       <Navigation />
       <Container>
         <Main>
-          <LoginForm>
-            <form action="#" method="post">
+          <TextBox>
+            <Forms>
               <h2>투자의 새로운 패러다임</h2>
               <br></br>
               <br></br>
-              <input type="text" value={"ID"} onClick={deleteValue}></input>
-              <br></br>
-              <input type="text" value={"PW"}></input>
-            </form>
-          </LoginForm>
+              <form onSubmit={handleSubmit(onValid)}>
+                <InputBox>
+                  <input
+                    {...register("user_id", {
+                      required: "아이디를 입력하세요.",
+                    })}
+                    type="text"
+                    placeholder="아이디"
+                  />
+                </InputBox>
+                {errors.user_id && <p>{errors.user_id.message}</p>}
+                <InputBox>
+                  <input
+                    {...register("password", {
+                      required: "비밀번호를 입력하세요.",
+                    })}
+                    type="password"
+                    placeholder="비밀번호"
+                  />
+                </InputBox>
+                {errors.password && <p>{errors.password.message}</p>}
+                <ButtonBox>
+                  <button>로그인</button>
+                </ButtonBox>
+              </form>
+            </Forms>
+          </TextBox>
         </Main>
       </Container>
       <Footer />
