@@ -60,7 +60,7 @@ export default function Navigation() {
       <NavBar>
         <span onClick={onMove}>HOME</span>
         <span onClick={onMove}>LOGIN</span>
-        <span onClick={onMove}>SIGN-UP</span>
+        <span onClick={onMove}>SIGNUP</span>
         <span onClick={onMove}>LOGIN</span>
       </NavBar>
     </Container>
