@@ -6,6 +6,7 @@ export const theme: DefaultTheme = {
   subColor: "#cba515ff",
   backgroundColor: "#ffffffff",
   borderColor: "#181a1cff",
+  cyColor: "#999595ff",
 };
 
 export const darkTheme: DefaultTheme = {
