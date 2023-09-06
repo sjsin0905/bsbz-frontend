@@ -309,7 +309,7 @@ export default function MainInfo() {
           </ActionBox>
         </Detail>
       </Container>
-      <Pentagon isReverse={false} />
+      <Pentagon reverse={false} />
     </>
   );
 }

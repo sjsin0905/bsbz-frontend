@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer/Footer";
 import { useForm } from "react-hook-form";
+import Pentagon from "../components/Pentagon";
 
 const Container = styled.div`
   display: flex;
@@ -16,17 +17,49 @@ const Container = styled.div`
 `;
 
 const Main = styled.div`
-  height: 68vh;
+  height: 76vh;
   width: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const TextBox = styled.div`
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    // 회원가입 텍스트
+    margin-bottom: 2vh;
+  }
+`;
+
+const Forms = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   form {
     display: flex;
     flex-direction: column;
+    // 입력 폼
+
+    input {
+      // 데이터 입력 폼
+      border: none;
+      margin-bottom: 2vh;
+      padding: 1vh;
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 `;
 
@@ -60,89 +93,101 @@ export default function Signup() {
       <Navigation />
       <Container>
         <Main>
-          <form onSubmit={handleSubmit(onValid)}>
-            <input
-              {...register("user_id", {
-                required: "아이디를 업력하세요.",
-                minLength: {
-                  value: 5,
-                  message: "아이디가 너무 짧습니다.",
-                },
-              })}
-              type="text"
-              placeholder="아이디"
-            />
-            <input
-              {...register("password", {
-                required: "비밀번호를 입력하세요.",
-                minLength: {
-                  value: 8,
-                  message: "비밀번호가 너무 짧습니다.",
-                },
-                maxLength: {
-                  value: 16,
-                  message: "비밀번호가 너무 깁니다.",
-                },
-                pattern: {
-                  value: /^(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,16}$/,
-                  message:
-                    "비밀번호는 숫자, 특수문자가 각각 최소 1개이상이어야 합니다.",
-                },
-              })}
-              type="password"
-              placeholder="비밀번호"
-            />
-            <input
-              {...register("email", {
-                required: "이메일을 입력하세요.",
-                pattern: {
-                  value: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
-                  message: "이메일 형식만 가능합니다.",
-                },
-              })}
-              placeholder="이메일"
-            />
-            <input
-              {...register("user_name", {
-                required: "이름을 입력하세요.",
-              })}
-              placeholder="이 름"
-            />
-            <input
-              {...register("ssn", {
-                required: "주민등록번호를 입력하세요.",
-                pattern: {
-                  value: /^[0-9]{6}-?[0-9]{7}$/,
-                  message: "주민등록번호 형식이 맞지 않습니다.",
-                },
-              })}
-              placeholder="주민등록번호"
-            />
-            <input
-              {...register("phone_num", {
-                required: "전화번호를 입력해 주세요.",
-                pattern: {
-                  value: /^\d{3}-\d{4}-\d{4}$/,
-                  message: "전화번호 형식이 맞지 않습니다.",
-                },
-              })}
-              placeholder="전화번호"
-            />
-            <button>가입 하기</button>
-          </form>
-          <span>
-            {errors?.user_id?.message
-              ? errors?.user_id?.message
-              : errors?.password?.message
-              ? errors?.password?.message
-              : errors?.email?.message
-              ? errors?.email?.message
-              : errors?.user_name?.message
-              ? errors?.user_name?.message
-              : errors?.ssn?.message
-              ? errors?.ssn?.message
-              : errors?.phone_num?.message}
-          </span>
+          <Pentagon reverse={false} />
+          <TextBox>
+            <Forms>
+              <h2>회원 가입</h2>
+
+              <form onSubmit={handleSubmit(onValid)}>
+                <input
+                  {...register("user_id", {
+                    required: "아이디를 입력하세요.",
+                    minLength: {
+                      value: 5,
+                      message: "아이디가 너무 짧습니다.",
+                    },
+                  })}
+                  type="text"
+                  placeholder="아이디"
+                />
+                <input
+                  {...register("password", {
+                    required: "비밀번호를 입력하세요.",
+                    minLength: {
+                      value: 8,
+                      message: "비밀번호가 너무 짧습니다.",
+                    },
+                    maxLength: {
+                      value: 16,
+                      message: "비밀번호가 너무 깁니다.",
+                    },
+                    pattern: {
+                      value: /^(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,16}$/,
+                      message:
+                        "비밀번호는 숫자, 특수문자가 각각 최소 1개이상이어야 합니다.",
+                    },
+                  })}
+                  type="password"
+                  placeholder="비밀번호"
+                />
+                <input
+                  {...register("email", {
+                    required: "이메일을 입력하세요.",
+                    pattern: {
+                      value: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
+                      message: "이메일 형식만 가능합니다.",
+                    },
+                  })}
+                  placeholder="이메일"
+                />
+                <input
+                  {...register("user_name", {
+                    required: "이름을 입력하세요.",
+                  })}
+                  placeholder="이 름"
+                />
+                <input
+                  {...register("ssn", {
+                    required: "주민등록번호를 입력하세요.",
+                    pattern: {
+                      value: /^[0-9]{6}-?[0-9]{7}$/,
+                      message: "주민등록번호 형식이 맞지 않습니다.",
+                    },
+                  })}
+                  placeholder="주민등록번호"
+                />
+                <input
+                  {...register("phone_num", {
+                    required: "전화번호를 입력해 주세요.",
+                    pattern: {
+                      value: /^\d{3}-\d{4}-\d{4}$/,
+                      message: "전화번호 형식이 맞지 않습니다.",
+                    },
+                  })}
+                  placeholder="전화번호"
+                />
+                <button>가입 하기</button>
+              </form>
+            </Forms>
+
+            <span>
+              {errors?.user_id?.message
+                ? errors?.user_id?.message
+                : errors?.password?.message
+                ? errors?.password?.message
+                : errors?.email?.message
+                ? errors?.email?.message
+                : errors?.user_name?.message
+                ? errors?.user_name?.message
+                : errors?.ssn?.message
+                ? errors?.ssn?.message
+                : errors?.phone_num?.message
+                ? errors?.phone_num?.message
+                : " "}
+            </span>
+          </TextBox>
+
+          <Pentagon reverse={true} />
         </Main>
       </Container>
       <Footer />

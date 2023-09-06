@@ -47,7 +47,7 @@ export default function Navigation() {
   const onMove = (event: React.MouseEvent<HTMLSpanElement>) => {
     // console.log(event);
     let destination = event.currentTarget.innerText.toLowerCase();
-    console.log(destination);
+    // console.log(destination);
 
     destination === "home" ? nav("/") : nav(`/${destination}`);
   };
