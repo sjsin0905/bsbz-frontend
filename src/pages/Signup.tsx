@@ -206,7 +206,7 @@ export default function Signup() {
                     {...register("ssn", {
                       required: "주민등록번호를 입력하세요.",
                       pattern: {
-                        value: /^[0-9]{6}-?[0-9]{7}$/,
+                        value: /^[0-9]{6}-[0-9]{7}$/,
                         message: "주민등록번호 형식이 맞지 않습니다.",
                       },
                     })}
