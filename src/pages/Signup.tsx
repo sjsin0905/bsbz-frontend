@@ -133,6 +133,35 @@ export default function Signup() {
     console.log(errors);
   };
 
+  const formatSSN = (ssn: string) => {
+    // 입력값에서 숫자 이외의 문자를 제거
+    const numericSSN = ssn.replace(/\D/g, "");
+
+    // 주민등록번호 형식에 맞게 "-" 추가
+    if (numericSSN.length >= 7) {
+      return `${numericSSN.slice(0, 6)}-${numericSSN.slice(6)}`;
+    } else {
+      return numericSSN;
+    }
+  };
+
+  const formatPhone = (phone_num: string) => {
+    // 입력값에서 숫자 이외의 문자를 제거
+    const numericPhone = phone_num.replace(/\D/g, "");
+
+    // 핸드폰번호 형식에 맞게 "-" 추가 예시) 010-1234-1234
+    if (numericPhone.length >= 4 && numericPhone.length <= 7) {
+      return `${numericPhone.slice(0, 3)}-${numericPhone.slice(3)}`;
+    } else if (numericPhone.length >= 8) {
+      return `${numericPhone.slice(0, 3)}-${numericPhone.slice(
+        3,
+        7
+      )}-${numericPhone.slice(7)}`;
+    } else {
+      return numericPhone;
+    }
+  };
+
   return (
     <>
       {isLoading && <Loading />}
@@ -209,8 +238,14 @@ export default function Signup() {
                         value: /^[0-9]{6}-[0-9]{7}$/,
                         message: "주민등록번호 형식이 맞지 않습니다.",
                       },
+                      onChange: (
+                        event: React.ChangeEvent<HTMLInputElement>
+                      ) => {
+                        event.target.value = formatSSN(event.target.value);
+                      },
                     })}
                     placeholder="주민등록번호"
+                    maxLength={14}
                   />
                 </InputBox>
                 <InputBox>
@@ -221,8 +256,14 @@ export default function Signup() {
                         value: /^\d{3}-\d{4}-\d{4}$/,
                         message: "전화번호 형식이 맞지 않습니다.",
                       },
+                      onChange: (
+                        event: React.ChangeEvent<HTMLInputElement>
+                      ) => {
+                        event.target.value = formatPhone(event.target.value);
+                      },
                     })}
                     placeholder="전화번호"
+                    maxLength={13}
                   />
                 </InputBox>
                 <ButtonBox>
