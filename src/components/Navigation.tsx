@@ -64,14 +64,17 @@ export default function Navigation() {
         <span onClick={onMove} id="home">
           홈
         </span>
+        <span onClick={onMove} id="research">
+          리 서 치
+        </span>
+        <span onClick={onMove} id="banking">
+          뱅 킹
+        </span>
         <span onClick={onMove} id="login">
           로 그 인
         </span>
         <span onClick={onMove} id="signup">
           회원 가입
-        </span>
-        <span onClick={onMove} id="research">
-          리 서 치
         </span>
       </NavBar>
     </Container>

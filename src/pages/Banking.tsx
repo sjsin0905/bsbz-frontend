@@ -1,0 +1,19 @@
+import { useState } from "react";
+import Loading from "../components/Loading";
+import Hood from "../components/Hood";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer/Footer";
+import BankingMainBox from "../components/BankingComponents/BankingMainBox";
+
+export default function Banking() {
+  const [isLoading, setIsLoading] = useState(false);
+  return (
+    <>
+      <Hood title={"BANKING"} />
+      {isLoading && <Loading />}
+      <Navigation />
+      <BankingMainBox />
+      <Footer />
+    </>
+  );
+}

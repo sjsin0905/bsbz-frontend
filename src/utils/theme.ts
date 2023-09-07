@@ -5,7 +5,7 @@ export const theme: DefaultTheme = {
   // 배경 색
   navColor: "#262525ff",
   // nav 생상 - 검정
-  footerColor: "#fffffff",
+  footerColor: "#262525ff",
   // footer 색상 - 검정
   borderColor: "#343434ff",
   // 테두리 색
@@ -18,6 +18,7 @@ export const theme: DefaultTheme = {
   textColor2: "#ffffffff",
   // 기본 텍스트 색상 2 - 흰색
   errorColor: "#ff6347ff",
+  // 에러 메세지 색상 - 빨강색
 };
 
 export const darkTheme: DefaultTheme = {
