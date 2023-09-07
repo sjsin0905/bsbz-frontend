@@ -8,8 +8,8 @@ import Pentagon from "../Pentagon";
 const Container = styled.div`
   height: 180vh;
   width: 100%;
-  background-color: ${(props) => props.theme.borderColor};
-  color: ${(props) => props.theme.mainColor};
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.textColor};
 `;
 
 const Detail = styled.div`

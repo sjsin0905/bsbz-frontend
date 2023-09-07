@@ -35,8 +35,8 @@ const memberList = [
 ];
 
 const Container = styled.div`
-  background-color: ${(props) => props.theme.borderColor};
-  color: ${(props) => props.theme.textColor};
+  background-color: ${(props) => props.theme.footerColor};
+  color: ${(props) => props.theme.textColor2};
   height: 12vh;
 
   display: flex;
