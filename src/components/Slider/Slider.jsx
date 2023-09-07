@@ -15,10 +15,10 @@ import { styled } from "styled-components";
 import { Navigation, Autoplay } from "swiper/modules";
 
 const Container = styled.div`
-  padding: 12vh 0 0 0;
+  padding: 10vh 0 0 0;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
   background-repeat: no-repeat;
-  background-color: ${(props) => props.theme.mainColor};
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 export default function Slider({ data }) {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div<{ reverse: boolean }>`
   height: 5vh;
-  background-color: ${(props) => props.theme.mainColor};
+  background-color: ${(props) => props.theme.backgroundColor};
 
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;

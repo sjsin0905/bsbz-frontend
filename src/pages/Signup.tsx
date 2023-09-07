@@ -13,7 +13,7 @@ const Container = styled.div`
   align-items: center;
 
   padding-top: 12vh;
-  background-color: ${(props) => props.theme.mainColor};
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 const Main = styled.div`
@@ -32,6 +32,11 @@ const TextBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  span {
+    color: ${(props) => props.theme.errorColor};
+    font-weight: bold;
+  }
 
   h2 {
     // 회원가입 텍스트

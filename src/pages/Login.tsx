@@ -72,6 +72,11 @@ const Forms = styled.div`
       padding: 1vh;
       border-radius: 6px;
     }
+
+    span {
+      color: ${(props) => props.theme.errorColor};
+      font-weight: bold;
+    }
   }
 `;
 

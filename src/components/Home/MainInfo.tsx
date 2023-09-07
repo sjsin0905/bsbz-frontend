@@ -32,7 +32,7 @@ const TextBox = styled.div`
   h2 {
     font-size: 36px;
     margin-bottom: 24px;
-    color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.highlightColor};
   }
 
   p {
@@ -42,7 +42,7 @@ const TextBox = styled.div`
   h3 {
     font-size: 24px;
     margin: 36px 0;
-    color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.highlightColor};
   }
 
   h4 {
@@ -165,14 +165,14 @@ const Button = styled.div`
   height: 8vh;
   width: 100%;
 
-  background-color: ${(props) => props.theme.textColor};
+  background-color: ${(props) => props.theme.textColor2};
   border-radius: 0 0 1vw 1vw;
   color: ${(props) => props.theme.borderColor};
 
-  transition: background-color ease-in 0.5s;
+  transition: background-color ease 0.3s;
 
   &:hover {
-    background-color: none;
+    background-color: ${(props) => props.theme.highlightColor2};
     color: ${(props) => props.theme.textColor};
   }
 
@@ -309,7 +309,6 @@ export default function MainInfo() {
           </ActionBox>
         </Detail>
       </Container>
-      <Pentagon reverse={false} />
     </>
   );
 }

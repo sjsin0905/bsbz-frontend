@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.borderColor2};
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 const Dots = styled.div`
@@ -26,7 +26,7 @@ const Dots = styled.div`
   gap: 18px;
 
   span {
-    color: ${(props) => props.theme.mainColor};
+    color: ${(props) => props.theme.highlightColor};
   }
 `;
 

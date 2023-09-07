@@ -29,7 +29,7 @@ const TextBox = styled.div`
 
   h2 {
     font-size: 24px;
-    color: ${(props) => props.theme.mainColor};
+    color: ${(props) => props.theme.highlightColor};
     width: 35%;
     margin: 0 0 8px 12px;
   }
@@ -38,7 +38,7 @@ const TextBox = styled.div`
     font-size: 16px;
     width: 35%;
     margin: 0 0 8px 12px;
-    color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.textColor2};
   }
 `;
 

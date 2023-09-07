@@ -1,22 +1,23 @@
 import { DefaultTheme } from "styled-components";
 
 export const theme: DefaultTheme = {
-  backgroundColor: "#ffffffff",
+  backgroundColor: "#fafafaff",
   // 배경 색
-  navColor: "#000000ff",
+  navColor: "#262525ff",
   // nav 생상 - 검정
-  footerColor: "#000000ff",
+  footerColor: "#fffffff",
   // footer 색상 - 검정
-  borderColor: "#000000ff",
+  borderColor: "#343434ff",
   // 테두리 색
   highlightColor: "#ffd700ff",
   // 강조 색 - 노랑
   highlightColor2: "#5ca7aeff",
   // 강조 색 - 민트
-  textColor: "#000000ff",
+  textColor: "#343434ff",
   // 기본 텍스트 색상 - 검정색
   textColor2: "#ffffffff",
   // 기본 텍스트 색상 2 - 흰색
+  errorColor: "#ff6347ff",
 };
 
 export const darkTheme: DefaultTheme = {
