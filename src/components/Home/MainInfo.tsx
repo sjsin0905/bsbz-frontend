@@ -303,7 +303,7 @@ export default function MainInfo() {
 
             <ButtonBorder>
               <Button>
-                <h3>투자하러 가기</h3>
+                <h3>더 알아보기</h3>
               </Button>
             </ButtonBorder>
           </ActionBox>
