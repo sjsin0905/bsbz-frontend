@@ -153,7 +153,6 @@ export default function Login() {
                     placeholder="아이디"
                   />
                 </InputBox>
-                {errors.user_id && <p>{errors.user_id.message}</p>}
                 <InputBox>
                   <input
                     {...register("password", {
@@ -163,10 +162,17 @@ export default function Login() {
                     placeholder="비밀번호"
                   />
                 </InputBox>
-                {errors.password && <p>{errors.password.message}</p>}
                 <ButtonBox>
                   <button>로그인</button>
                 </ButtonBox>
+
+                <span>
+                  {errors?.user_id?.message
+                    ? errors?.user_id?.message
+                    : errors?.password?.message
+                    ? errors?.password?.message
+                    : " "}
+                </span>
               </form>
             </Forms>
           </TextBox>
