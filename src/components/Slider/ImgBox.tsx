@@ -2,9 +2,8 @@ import { styled } from "styled-components";
 // import { ISliderData } from "./Slider";
 
 const Container = styled.span<{ url: string }>`
-  width: 100vw;
-  height: 75vh;
-
+  width: 90%;
+  height: 90%;
   display: flex;
   justify-content: start;
   align-items: flex-end;

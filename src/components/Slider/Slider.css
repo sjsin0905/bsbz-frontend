@@ -2,3 +2,7 @@
   --swiper-navigation-color: white !important;
   --swiper-theme-color: white !important;
 }
+.swiper {
+  width: 40vw;
+  height: 50vh;
+}
