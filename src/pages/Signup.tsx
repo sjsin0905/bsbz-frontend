@@ -140,10 +140,21 @@ export default function Signup() {
 
   const formatSSN = (ssn: string) => {
     // 입력값에서 숫자 이외의 문자를 제거
-    const numericSSN = ssn.replace(/\D/g, "");
+    const numericSSN = ssn
+      .replace(/\D/g, "")
+      .replace(/(\d{6})(\d{1})(\d{6})/, "$1$2******");
 
     // 주민등록번호 형식에 맞게 "-" 추가
     if (numericSSN.length >= 7) {
+      // 이 부분에 ssn 저장 후 마스킹 할 예정
+      // setValue(
+      //   "ssn",
+      //   watch("ssn")
+      //     .replace(/[^0-9]/g, "")
+      //     .replace(/^(\d{0,6})(\d{0,7})$/g, "$1-$2")
+      //     .replace(/-{1,2}$/g, "")
+      // );
+      // 마스킹 한 ssn리턴
       return `${numericSSN.slice(0, 6)}-${numericSSN.slice(6)}`;
     } else {
       return numericSSN;
