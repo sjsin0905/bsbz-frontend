@@ -29,7 +29,7 @@ const Box = styled.div`
     height: 7vh;
     position: absolute;
     top: 158px;
-    //border: 1px solid;
+    border: 1px solid;
     pointer-events: none; /* 클릭 비활성화 */
 
     z-index: 2; /* 텍스트를 토글 버튼 위로 올립니다. */
@@ -44,7 +44,7 @@ const Box = styled.div`
     position: absolute;
     top: 158px;
     left: 50vw;
-    //border: 1px solid;
+    border: 1px solid;
     pointer-events: auto; /* 클릭 활성화 */
 
     z-index: 2; /* 텍스트를 토글 버튼 위로 올립니다. */

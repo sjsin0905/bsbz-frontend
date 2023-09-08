@@ -140,9 +140,9 @@ export default function Signup() {
 
   const formatSSN = (ssn: string) => {
     // 입력값에서 숫자 이외의 문자를 제거
-    const numericSSN = ssn
-      .replace(/\D/g, "")
-      .replace(/(\d{6})(\d{1})(\d{6})/, "$1$2******");
+    const numericSSN = ssn.replace(/\D/g, "");
+    // .replace(/(\d{6})(\d{1})(\d{6})/, "$1$2******");
+    // 0908.YH ssn masking
 
     // 주민등록번호 형식에 맞게 "-" 추가
     if (numericSSN.length >= 7) {
