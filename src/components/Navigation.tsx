@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
+import useScrollReset from "../utils/useScrollReset";
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.navColor};
@@ -44,13 +45,14 @@ const Logo = styled.div``;
 
 export default function Navigation() {
   const nav = useNavigate();
+  let reset = useScrollReset();
 
   const onMove = (event: React.MouseEvent<HTMLSpanElement>) => {
     // console.log(event);
-    let destination = event.currentTarget.id;
+    let destination = String(event.currentTarget.id);
     // console.log(destination);
 
-    destination === "home" ? nav("/") : nav(`/${destination}`);
+    destination === "home" ? reset("/") : reset(`/${destination}`);
   };
 
   return (
