@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.navColor};
-  color: ${(props) => props.theme.textColor2};
+  color: ${(props) => props.theme.textColor};
   height: 10vh;
 
   position: fixed;
@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.8);
+  /* box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.8); */
 `;
 
 const NavBar = styled.div`
@@ -25,7 +25,7 @@ const NavBar = styled.div`
   gap: 12px;
 
   span {
-    color: ${(props) => props.theme.textColor2};
+    color: ${(props) => props.theme.textColor};
     padding: 12px 18px;
     border: 2px solid ${(props) => props.theme.navColor};
     transition: border-top ease-in-out 0.3s, border-right 0.3s ease-in-out 0.1s,

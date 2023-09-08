@@ -3,8 +3,8 @@ import { DefaultTheme } from "styled-components";
 export const theme: DefaultTheme = {
   backgroundColor: "#fafafaff",
   // 배경 색
-  navColor: "#262525ff",
-  // nav 생상 - 검정
+  navColor: "#fafafaff",
+  // nav 생상 - 흰색
   footerColor: "#262525ff",
   // footer 색상 - 검정
   borderColor: "#343434ff",

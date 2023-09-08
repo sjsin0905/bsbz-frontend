@@ -116,7 +116,7 @@ const Desc = styled.div`
   margin: 20px;
 `;
 
-export default function BankingMainBox() {
+export default function BankingInfo() {
   const [isOn, setisOn] = useState(true);
 
   const toggleHandler = () => {

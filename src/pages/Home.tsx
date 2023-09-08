@@ -50,7 +50,7 @@ export default function Home() {
       <Hood title={"HOMEPAGE"} />
       {isLoading && <Loading />}
       <Navigation />
-      <Slider data={imgList} />
+      {/* <Slider data={imgList} /> */}
       <MainInfo />
       <Footer />
     </>
