@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading";
 import Signup from "./pages/Signup";
 import Banking from "./pages/Banking";
+import Research from "./pages/Research";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/loading" element={<Loading />} />
       <Route path="/banking" element={<Banking />} />
+      <Route path="/research" element={<Research />} />
     </Routes>
   );
 }

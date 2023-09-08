@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Pentagon from "../Pentagon";
+import { theme } from "../../utils/theme";
 
 const Container = styled.div`
   width: 100vw;
@@ -6,13 +8,13 @@ const Container = styled.div`
   flex-direction: row;
 `;
 
-const Box = styled.div<{ bgType: string }>`
+const Box = styled.div<{ bgtype: string }>`
   height: 100vh;
 
   background-color: ${(props) =>
-    props.bgType === "yellow"
+    props.bgtype === "yellow"
       ? props.theme.highlightColor
-      : props.bgType === "mint"
+      : props.bgtype === "mint"
       ? props.theme.highlightColor2
       : props.theme.backgroundColor};
 
@@ -39,14 +41,22 @@ const TextBox = styled.span`
   }
 `;
 
-const Header = styled.div`
+const Header = styled.div<{ fontcolor: string }>`
+  color: ${(props) =>
+    props.fontcolor === "default"
+      ? props.theme.textColor
+      : props.fontcolor === "mint"
+      ? props.theme.highlightColor2
+      : props.fontcolor === "yellow"
+      ? theme.highlightColor1
+      : props.fontcolor === "white"
+      ? theme.backgroundColor
+      : null};
   h2 {
-    color: ${(props) => props.theme.textColor};
     font-size: 48px;
   }
 
   h3 {
-    color: ${(props) => props.theme.textColor};
     font-size: 36px;
   }
 `;
@@ -65,9 +75,9 @@ export default function HomeInfo() {
   return (
     <>
       <Container>
-        <Box bgType={"yellow"}>
+        <Box bgtype={"yellow"}>
           <TextBox>
-            <Header>
+            <Header fontcolor={"default"}>
               <h3>조각투자</h3>
               <h2>벌써 부자</h2>
             </Header>
@@ -78,11 +88,12 @@ export default function HomeInfo() {
           </TextBox>
           <ImgBox url={"images/resource_img_01.png"} />
         </Box>
+        <Pentagon reverse={"false"} color={"yellow"} bgColor={"bg"} />
 
-        <Box bgType={"white"}>
+        <Box bgtype={"white"}>
           <ImgBox url={"images/resource_img_01.png"} />
           <TextBox>
-            <Header>
+            <Header fontcolor={"mint"}>
               <h2>조각투자 벌써부자</h2>
             </Header>
             <p>
@@ -91,10 +102,11 @@ export default function HomeInfo() {
             </p>
           </TextBox>
         </Box>
+        <Pentagon reverse={"false"} color={"bg"} bgColor={"mint"} />
 
-        <Box bgType={"mint"}>
+        <Box bgtype={"mint"}>
           <TextBox>
-            <Header>
+            <Header fontcolor={"white"}>
               <h2>조각투자 벌써부자</h2>
             </Header>
             <p>

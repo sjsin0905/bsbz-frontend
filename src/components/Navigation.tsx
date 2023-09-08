@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  /* box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.8); */
+  box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.1);
 `;
 
 const NavBar = styled.div`

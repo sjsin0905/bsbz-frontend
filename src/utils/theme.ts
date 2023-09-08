@@ -11,7 +11,7 @@ export const theme: DefaultTheme = {
   // 테두리 색
   highlightColor: "#ffd700ff",
   // 강조 색 - 노랑
-  highlightColor2: "#5ca7aeff",
+  highlightColor2: "#40E0D0ff",
   // 강조 색 - 민트
   textColor: "#343434ff",
   // 기본 텍스트 색상 - 검정색

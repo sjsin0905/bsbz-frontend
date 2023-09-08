@@ -30,8 +30,9 @@ const TextBox = styled.div`
   height: 68vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+  margin: 3vh 0 3vh 0;
 
   span {
     color: ${(props) => props.theme.errorColor};
@@ -99,7 +100,7 @@ const ButtonBox = styled.div`
     cursor: pointer;
     button {
       color: ${(props) => props.theme.borderColor};
-      background-color: ${(props) => props.theme.cyColor};
+      background-color: ${(props) => props.theme.highlightColor};
       cursor: pointer;
     }
   }
@@ -184,7 +185,6 @@ export default function Signup() {
       <Navigation />
       <Container>
         <Main>
-          <Pentagon reverse={false} />
           <TextBox>
             <Forms>
               <h2>회원 가입</h2>
@@ -305,7 +305,7 @@ export default function Signup() {
             </span>
           </TextBox>
 
-          <Pentagon reverse={true} />
+          <Pentagon reverse={"true"} color={"border"} bgColor={"bg"} />
         </Main>
       </Container>
       <Footer />
