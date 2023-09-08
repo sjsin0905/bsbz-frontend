@@ -135,7 +135,7 @@ export default function Signup() {
 
   const onValid = (data: IFormData) => {
     console.log(data);
-    console.log(errors);
+    // console.log(errors);
   };
 
   const formatSSN = (ssn: string) => {

@@ -7,6 +7,7 @@ import MainInfo from "../components/Home/MainInfo";
 import { styled } from "styled-components";
 import Hood from "../components/Hood";
 import { title } from "process";
+import HomeInfo from "../components/Home/HomeInfo";
 
 const imgList = [
   {
@@ -51,7 +52,8 @@ export default function Home() {
       {isLoading && <Loading />}
       <Navigation />
       {/* <Slider data={imgList} /> */}
-      <MainInfo />
+      {/* <MainInfo /> */}
+      <HomeInfo />
       <Footer />
     </>
   );
