@@ -41,7 +41,18 @@ const NavBar = styled.div`
   }
 `;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  img {
+    height: 30%;
+  }
+`;
 
 export default function Navigation() {
   const nav = useNavigate();
@@ -58,9 +69,7 @@ export default function Navigation() {
   return (
     <Container>
       <Logo>
-        <h2 onClick={onMove} id="home">
-          LOGO
-        </h2>
+        <img onClick={onMove} id="home" src="images/bsbz-icon.png" alt="logo" />
       </Logo>
       <NavBar>
         <span onClick={onMove} id="home">

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Pentagon from "../Pentagon";
 import { theme } from "../../utils/theme";
+import Button from "../Button";
 
 const Container = styled.div`
   width: 100vw;
@@ -85,6 +86,13 @@ export default function HomeInfo() {
               Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
               Ipsum Lorem Ipsum
             </p>
+
+            <Button
+              width={"180px"}
+              height={"42px"}
+              hover={"mint"}
+              text={"HELLO"}
+            />
           </TextBox>
           <ImgBox url={"images/resource_img_01.png"} />
         </Box>
@@ -100,6 +108,13 @@ export default function HomeInfo() {
               Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
               Ipsum Lorem Ipsum
             </p>
+
+            <Button
+              width={"180px"}
+              height={"42px"}
+              hover={"yellow"}
+              text={"DEFAULT TEXT"}
+            />
           </TextBox>
         </Box>
         <Pentagon reverse={"false"} color={"bg"} bgColor={"mint"} />
@@ -113,6 +128,13 @@ export default function HomeInfo() {
               Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
               Ipsum Lorem Ipsum
             </p>
+
+            <Button
+              width={"180px"}
+              height={"42px"}
+              hover={"yellow"}
+              text={"DEFAULT TEXT"}
+            />
           </TextBox>
           <ImgBox url={"images/resource_img_01.png"} />
         </Box>
