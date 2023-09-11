@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import Pentagon from "../components/Pentagon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faForumbee } from "@fortawesome/free-brands-svg-icons";
+import axios from "axios";
 
 const Container = styled.div`
   display: flex;
@@ -90,12 +91,9 @@ const ButtonBox = styled.div`
   justify-content: start;
   align-items: center;
 
-  border-radius: 8px;
-  border: 2px solid ${(props) => props.theme.borderColor};
-
+  border-radius: 2px;
+  opacity: 0.7;
   overflow: hidden;
-  background-color: ${(props) => props.theme.borderColor};
-  padding: 0 1px 6px 1px;
 
   transition: background-color ease 0.3s;
 
@@ -116,12 +114,10 @@ const ButtonBox = styled.div`
 `;
 
 const InputBox = styled.div`
-  background-color: ${(props) => props.theme.borderColor};
   margin-bottom: 2vh;
   border-radius: 8px;
-  border: 2px solid ${(props) => props.theme.borderColor};
+  opacity: 0.7;
   overflow: hidden;
-  padding: 0 1px 6px 1px;
 `;
 
 const LeftBox = styled.div`
@@ -165,7 +161,7 @@ const Line = styled.div`
 `;
 
 interface IFormData {
-  user_id: string;
+  userId: string;
   password: string;
   email: string;
   user_name: string;
@@ -182,8 +178,22 @@ export default function Signup() {
     handleSubmit,
     formState: { errors },
   } = useForm<IFormData>();
+  const BASE_URL = "http://localhost:9999"; // 서버 주소 설정
+  const onValid = async (data: IFormData) => {
+    try {
+      setIsLoading(true);
 
-  const onValid = (data: IFormData) => {
+      // 서버로 요청을 보내는 부분
+      const response = await axios.post(`${BASE_URL}/user/login`, data);
+
+      console.log(response.data); // 서버 응답 데이터 출력
+      console.log(response); // 서버 응답 데이터 출력
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+
     console.log(data);
     // console.log(errors);
   };
@@ -216,7 +226,7 @@ export default function Signup() {
                 <form onSubmit={handleSubmit(onValid)}>
                   <InputBox>
                     <input
-                      {...register("user_id", {
+                      {...register("userId", {
                         required: "아이디를 입력하세요.",
                       })}
                       type="text"
@@ -240,8 +250,8 @@ export default function Signup() {
               </Forms>
 
               <span>
-                {errors?.user_id?.message
-                  ? errors?.user_id?.message
+                {errors?.userId?.message
+                  ? errors?.userId?.message
                   : errors?.password?.message
                   ? errors?.password?.message
                   : " "}

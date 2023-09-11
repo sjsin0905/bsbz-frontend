@@ -32,22 +32,23 @@ const TextBox = styled.div`
   h2 {
     font-size: 36px;
     margin-bottom: 24px;
-    color: ${(props) => props.theme.highlightColor};
+    color: ${(props) => props.theme.textColor2};
   }
 
   p {
     font-size: 18px;
+    color: ${(props) => props.theme.textColor2};
   }
 
   h3 {
     font-size: 24px;
     margin: 36px 0;
-    color: ${(props) => props.theme.highlightColor};
+    color: ${(props) => props.theme.textColor2};
   }
 
   h4 {
     font-size: 18px;
-    color: ${(props) => props.theme.mainColor};
+    color: ${(props) => props.theme.textColor2};
     font-weight: lighter;
   }
 `;

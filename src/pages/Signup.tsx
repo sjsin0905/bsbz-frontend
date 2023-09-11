@@ -60,7 +60,7 @@ const Forms = styled.div`
 
     input {
       // 데이터 입력 폼
-      border: none;
+      border: 1px soild;
       padding: 1vh;
       width: 240px;
       border-radius: 8px;
@@ -82,16 +82,13 @@ const ButtonBox = styled.div`
   align-items: center;
 
   border-radius: 8px;
-  border: 2px solid ${(props) => props.theme.borderColor};
-
+  opacity: 0.7;
   overflow: hidden;
-  background-color: ${(props) => props.theme.borderColor};
-  padding: 0 1px 6px 1px;
 
   transition: background-color ease 0.3s;
 
   button {
-    background-color: ${(props) => props.theme.backgroundColor};
+    background-color: #b7a67a;
     transition: color ease 0.3s, background-color ease 0.3s;
     font-weight: bold;
   }
@@ -107,12 +104,10 @@ const ButtonBox = styled.div`
 `;
 
 const InputBox = styled.div`
-  background-color: ${(props) => props.theme.borderColor};
   margin-bottom: 2vh;
   border-radius: 8px;
-  border: 2px solid ${(props) => props.theme.borderColor};
   overflow: hidden;
-  padding: 0 1px 6px 1px;
+  opacity: 0.7;
 `;
 
 interface IFormData {
